@@ -1,8 +1,11 @@
 FROM python:3.5-alpine
 
 WORKDIR /app
-COPY source_code/ /app
+
+COPY . /app
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "server.py"]
+EXPOSE 8181
+
+ENTRYPOINT ["python", "app.py"]
