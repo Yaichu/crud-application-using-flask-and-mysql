@@ -19,4 +19,4 @@ spec:
         image: yaeldoc1/final_proj_app
         ports:
         - containerPort: 8181
-        restartPolicy: Always  
+      restartPolicy: Always
