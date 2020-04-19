@@ -8,7 +8,7 @@ import pymysql
 
 class Database:
     def connect(self):
-        return pymysql.connect("phonebook-mysql","dev","dev","crud_flask")
+        return pymysql.connect("34.226.138.190","dev","dev","crud_flask")
 
     def read(self, id):
         con = Database.connect(self)

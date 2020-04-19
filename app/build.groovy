@@ -2,7 +2,7 @@ node ("linux") {
     def DockerImage = "final_proj_app"
     stage("Git") { // Get code from GitLab repository
         git branch: 'master',
-            url: 'https://github.com/Yaichu/Mid-proj.git'
+            url: 'https://github.com/Yaichu/project-application'
     }
             
     stage("build docker") {
