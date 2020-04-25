@@ -1,7 +1,5 @@
 '''
-Created on Jan 10, 2017
-
-@author: hanif
+@author: Yael
 '''
 
 from flask import Flask, flash, render_template, redirect, url_for, request, session
@@ -26,9 +24,9 @@ def add():
 def addphone():
     if request.method == 'POST' and request.form['save']:
         if db.insert(request.form):
-            flash("A new phone number has been added")
+            flash("A new ice-cream store has been added")
         else:
-            flash("A new phone number can not be added")
+            flash("A new ice-cream store can not be added")
 
         return redirect(url_for('index'))
     else:
@@ -49,10 +47,10 @@ def updatephone():
     if request.method == 'POST' and request.form['update']:
 
         if db.update(session['update'], request.form):
-            flash('A phone number has been updated')
+            flash('An ice-cream store has been updated')
 
         else:
-            flash('A phone number can not be updated')
+            flash('An ice-cream store can not be updated')
 
         session.pop('update', None)
 
@@ -75,10 +73,10 @@ def deletephone():
     if request.method == 'POST' and request.form['delete']:
 
         if db.delete(session['delete']):
-            flash('A phone number has been deleted')
+            flash('An ice-cream store has been deleted')
 
         else:
-            flash('A phone number can not be deleted')
+            flash('An ice-cream store can not be deleted')
 
         session.pop('delete', None)
 
