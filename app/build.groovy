@@ -11,6 +11,7 @@ node ("linux") {
     
     stage("test") {
         sh 'docker images'
+        sh 'python test.py'
     }
     
     stage("push to Docker Hub") {
